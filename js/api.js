@@ -3,7 +3,7 @@
    AI-Powered Grievance Lodging System
    ========================================== */
 
-const API_BASE_URL = "https://says-miami-query-rouge.trycloudflare.com";
+const API_BASE_URL = "https://api.atharvabopche.online";
 
 /* ==========================================
    Submit Complaint
