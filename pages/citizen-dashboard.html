@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Submit Complaint | AI Grievance System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/animations.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i>
+            AI Grievance Portal
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="citizen-dashboard.html">Dashboard</a></li>
+            <li><a href="track-complaint.html">Track</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <h1>Enter Your Complaint Details</h1>
+
+    </section>
+
+    <!-- ================= FORM ================= -->
+
+    <main class="form-container">
+
+        <form id="complaintForm">
+
+            <!-- Name -->
+
+            <div class="input-group">
+
+                <label for="name">
+
+                    Name
+
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required>
+
+            </div>
+
+            <!-- Phone -->
+
+            <div class="input-group">
+
+                <label for="mobile">
+
+                    Phone Number
+
+                </label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    placeholder="9876543210"
+                    maxlength="10"
+                    required>
+
+            </div>
+
+            <!-- Complaint -->
+
+            <div class="input-group">
+
+                <label for="complaint">
+
+                    Complaint Details
+
+                </label>
+
+                <textarea
+                    id="complaint"
+                    rows="7"
+                    placeholder="Describe your complaint in detail..."
+                    required></textarea>
+
+            </div>
+
+            <!-- Category -->
+
+            <div class="input-group">
+
+                <label for="category">
+
+                    Complaint Category
+
+                </label>
+
+                <select id="category" required>
+
+                    <option selected disabled>
+
+                        Select an option
+
+                    </option>
+
+                    <option>Road Damage</option>
+                    <option>Water Supply</option>
+                    <option>Street Light</option>
+                    <option>Garbage</option>
+                    <option>Drainage</option>
+                    <option>Electricity</option>
+                    <option>Public Safety</option>
+                    <option>Other</option>
+
+                </select>
+
+            </div>
+
+            <!-- Location -->
+
+            <div class="input-group">
+
+                <label for="location">
+
+                    Location
+
+                </label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Provide the exact location"
+                    required>
+
+            </div>
+
+            <!-- Consent -->
+
+            <div class="input-group checkbox-group">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="consent"
+                        required>
+
+                    I confirm that the information provided is true.
+
+                </label>
+
+            </div>
+
+            <!-- Submit -->
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                Submit Complaint
+
+            </button>
+
+        </form>
+
+    </main>
+
+    <!-- ================= LOADING ================= -->
+
+    <div id="loadingBox" class="loading-box">
+
+        <div class="loader"></div>
+
+        <h3>Analyzing Complaint...</h3>
+
+        <p>
+
+            AI is identifying the correct department.
+
+        </p>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 AI-Powered Grievance Lodging & Tracking System
+
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="../js/api.js"></script>
+    <script src="../js/submit.js"></script>
+
+</body>
+
+</html>

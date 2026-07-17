@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Track Complaint | AI Grievance Portal</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/track.css">
+    <link rel="stylesheet" href="../css/animations.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-left">
+
+            <a href="../index.html">Home</a>
+
+            <a href="track-complaint.html">Track Complaint</a>
+
+        </div>
+
+        <div class="logo">
+
+            AI-Powered Grievance Lodging & Tracking System
+
+        </div>
+
+        <div class="nav-right">
+
+            <a href="admin-dashboard.html" class="outline-btn">
+
+                Admin Dashboard
+
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= HEADER ================= -->
+
+    <section class="page-header">
+
+        <h1>
+
+            Track Complaint
+
+        </h1>
+
+        <p>
+
+            Enter your Ticket ID to check the latest status of your complaint.
+
+        </p>
+
+    </section>
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="track-search">
+
+        <div class="search-card">
+
+            <label for="ticketInput">
+
+                Ticket ID
+
+            </label>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="ticketInput"
+                    placeholder="Enter Ticket ID (Example: GRV202600001)">
+
+                <button id="trackBtn">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Track Complaint
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= RESULT ================= -->
+
+    <section id="resultSection" class="result-section" style="display:none;">
+
+        <div class="result-grid">
+
+            <!-- ================= DETAILS ================= -->
+
+            <div class="info-card">
+
+                <h2>
+
+                    Complaint Details
+
+                </h2>
+
+                <div class="detail-row">
+
+                    <span>Ticket ID</span>
+
+                    <strong id="ticketId"></strong>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Citizen</span>
+
+                    <strong id="citizenName"></strong>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Department</span>
+
+                    <strong id="department"></strong>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Location</span>
+
+                    <strong id="location"></strong>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Priority</span>
+
+                    <span id="priorityBadge" class="badge"></span>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Status</span>
+
+                    <span id="statusBadge" class="badge"></span>
+
+                </div>
+
+            </div>
+
+            <!-- ================= AI ================= -->
+
+            <div class="info-card">
+
+                <h2>
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    AI Analysis
+
+                </h2>
+
+                <div class="detail-row">
+
+                    <span>Issue</span>
+
+                    <strong id="issue"></strong>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Department</span>
+
+                    <strong id="aiDepartment"></strong>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Priority</span>
+
+                    <strong id="aiPriority"></strong>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Confidence</span>
+
+                    <strong id="confidence"></strong>
+
+                </div>
+
+                <div class="summary-box">
+
+                    <h3>
+
+                        AI Summary
+
+                    </h3>
+
+                    <p id="summary"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= TIMELINE ================= -->
+
+        <div class="timeline-card">
+
+            <h2>
+
+                Complaint Progress
+
+            </h2>
+
+            <div class="timeline">
+
+                <div class="step" id="stepSubmitted">
+
+                    <div class="circle"></div>
+
+                    <p>Submitted</p>
+
+                </div>
+
+                <div class="line"></div>
+
+                <div class="step" id="stepAssigned">
+
+                    <div class="circle"></div>
+
+                    <p>Assigned</p>
+
+                </div>
+
+                <div class="line"></div>
+
+                <div class="step" id="stepProgress">
+
+                    <div class="circle"></div>
+
+                    <p>In Progress</p>
+
+                </div>
+
+                <div class="line"></div>
+
+                <div class="step" id="stepInspection">
+
+                    <div class="circle"></div>
+
+                    <p>Inspection</p>
+
+                </div>
+
+                <div class="line"></div>
+
+                <div class="step" id="stepResolved">
+
+                    <div class="circle"></div>
+
+                    <p>Resolved</p>
+
+                </div>
+
+                <div class="line"></div>
+
+                <div class="step" id="stepClosed">
+
+                    <div class="circle"></div>
+
+                    <p>Closed</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= REMARKS ================= -->
+
+        <div class="remarks-card">
+
+            <h2>
+
+                Latest Remarks
+
+            </h2>
+
+            <p id="remarks">
+
+                No remarks available.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= LOADING ================= -->
+
+    <div id="loadingBox" class="loading-box">
+
+        <div class="loader"></div>
+
+        <h3>
+
+            Tracking Complaint...
+
+        </h3>
+
+        <p>
+
+            Fetching the latest information from the grievance database.
+
+        </p>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 AI-Powered Grievance Lodging & Tracking System
+
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="../js/api.js"></script>
+    <script src="../js/track.js"></script>
+
+</body>
+
+</html>

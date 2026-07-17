@@ -1,0 +1,580 @@
+/* ==========================================
+   TRACK COMPLAINT PAGE
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#1f2937;
+
+}
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.page-header{
+
+    text-align:center;
+    padding:55px 20px 30px;
+
+}
+
+.page-header h1{
+
+    font-size:3rem;
+    font-weight:700;
+    color:#111827;
+
+}
+
+.page-header p{
+
+    margin-top:10px;
+    color:#6b7280;
+    font-size:16px;
+
+}
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+.track-search{
+
+    display:flex;
+    justify-content:center;
+    margin-bottom:40px;
+
+}
+
+.search-card{
+
+    width:90%;
+    max-width:900px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+.search-card label{
+
+    display:block;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+.search-box{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    padding:16px 20px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:16px;
+
+}
+
+.search-box input:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+.search-box button{
+
+    background:#23395d;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 28px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.search-box button:hover{
+
+    background:#2563eb;
+
+}
+
+/* ==========================================
+   RESULT
+========================================== */
+
+.result-section{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:0 auto 60px;
+
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.result-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.info-card,
+
+.timeline-card,
+
+.remarks-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.info-card h2,
+
+.timeline-card h2,
+
+.remarks-card h2{
+
+    margin-bottom:30px;
+
+    color:#23395d;
+
+    font-size:28px;
+
+}
+
+/* ==========================================
+   DETAILS
+========================================== */
+
+.detail-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.detail-row span{
+
+    color:#6b7280;
+
+}
+
+.detail-row strong{
+
+    color:#111827;
+
+}
+
+/* ==========================================
+   BADGES
+========================================== */
+
+.badge{
+
+    padding:7px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* Priority */
+
+.high{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+.medium{
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+}
+
+.low{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+/* Status */
+
+.submitted{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+}
+
+.assigned{
+
+    background:#ede9fe;
+
+    color:#7c3aed;
+
+}
+
+.progress{
+
+    background:#ffedd5;
+
+    color:#ea580c;
+
+}
+
+.resolved{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.closed{
+
+    background:#e5e7eb;
+
+    color:#374151;
+
+}
+
+/* ==========================================
+   AI SUMMARY
+========================================== */
+
+.summary-box{
+
+    margin-top:25px;
+
+    background:#f8fafc;
+
+    border-left:5px solid #2563eb;
+
+    border-radius:12px;
+
+    padding:18px;
+
+}
+
+.summary-box h3{
+
+    margin-bottom:12px;
+
+}
+
+/* ==========================================
+   TIMELINE
+========================================== */
+
+.timeline{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:35px;
+
+}
+
+.step{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    width:120px;
+
+}
+
+.circle{
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:50%;
+
+    background:#d1d5db;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+}
+
+.line{
+
+    flex:1;
+
+    height:4px;
+
+    background:#d1d5db;
+
+    margin:0 5px;
+
+}
+
+.step.active .circle{
+
+    background:#2563eb;
+
+}
+
+.step.completed .circle{
+
+    background:#22c55e;
+
+}
+
+.step p{
+
+    text-align:center;
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+   REMARKS
+========================================== */
+
+.remarks-card p{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    color:#4b5563;
+
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.loading-box{
+
+    display:none;
+
+    position:fixed;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+    z-index:9999;
+
+}
+
+.loader{
+
+    width:60px;
+
+    height:60px;
+
+    border:6px solid #e5e7eb;
+
+    border-top:6px solid #2563eb;
+
+    border-radius:50%;
+
+    margin:auto auto 20px;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1000px){
+
+.result-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.timeline{
+
+flex-wrap:wrap;
+
+gap:20px;
+
+}
+
+.line{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.page-header h1{
+
+font-size:2.2rem;
+
+}
+
+.search-box{
+
+flex-direction:column;
+
+}
+
+.search-box button{
+
+width:100%;
+
+}
+
+.info-card,
+
+.timeline-card,
+
+.remarks-card{
+
+padding:25px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.page-header h1{
+
+font-size:1.8rem;
+
+}
+
+.step{
+
+width:90px;
+
+}
+
+.step p{
+
+font-size:12px;
+
+}
+
+}

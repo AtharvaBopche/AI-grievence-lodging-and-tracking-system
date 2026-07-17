@@ -1,0 +1,512 @@
+/* =====================================================
+   GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =====================================================
+   CSS VARIABLES
+===================================================== */
+
+:root {
+
+    /* Primary Colors */
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+
+    /* Secondary Colors */
+    --secondary-color: #0f172a;
+    --secondary-light: #1e293b;
+
+    /* Status Colors */
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+
+    /* Neutral Colors */
+    --white: #ffffff;
+    --light-bg: #f4f7fc;
+    --card-bg: rgba(255, 255, 255, 0.75);
+
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+
+    /* Borders */
+    --border-radius: 18px;
+
+    /* Shadows */
+    --shadow-sm: 0 5px 15px rgba(0,0,0,0.08);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.12);
+
+    /* Animation */
+
+    --transition: 0.3s ease;
+
+}
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+    background: linear-gradient(135deg,#f8fbff,#eef4ff);
+
+    color:#1f2937;
+
+    overflow-x:hidden;
+
+
+
+}
+
+/* =====================================================
+   COMMON ELEMENTS
+===================================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+}
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+section{
+
+    padding:80px 0;
+
+}
+
+/* =====================================================
+   HEADINGS
+===================================================== */
+
+h1{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+}
+
+h2{
+
+    font-size:2.2rem;
+
+    margin-bottom:20px;
+
+}
+
+h3{
+
+    font-size:1.3rem;
+
+    margin-bottom:10px;
+
+}
+
+p{
+
+    color:var(--text-light);
+
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.navbar .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+.logo{
+
+    
+
+    font-size:20px;
+
+    font-weight:800;
+
+    color:#2563EB;
+
+
+
+}
+
+.logo i{
+
+    font-size:1.8rem;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+.nav-links a{
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+.nav-links a:hover{
+
+    color:var(--primary-color);
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#1f2937;
+
+    font-weight:600;
+
+    margin:0 18px;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#2563EB;
+
+}
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 60px;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(16px);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    background:var(--primary-color);
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+}
+
+.btn-secondary{
+
+    background:white;
+
+    color:var(--primary-color);
+
+    border:2px solid var(--primary-color);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--primary-color);
+
+    color:white;
+
+}
+
+/* =====================================================
+   GLASS CARD
+===================================================== */
+
+.glass{
+
+    background:var(--card-bg);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:var(--border-radius);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:var(--secondary-color);
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+}
+
+footer p{
+
+    color:#d1d5db;
+
+    margin:8px 0;
+
+}
+
+/* =====================================================
+   UTILITIES
+===================================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-1{
+
+    margin-top:10px;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-3{
+
+    margin-top:30px;
+
+}
+
+.mb-1{
+
+    margin-bottom:10px;
+
+}
+
+.mb-2{
+
+    margin-bottom:20px;
+
+}
+
+.mb-3{
+
+    margin-bottom:30px;
+
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:992px){
+
+    h1{
+
+        font-size:2.4rem;
+
+    }
+
+    h2{
+
+        font-size:1.9rem;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar .container{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+    h1{
+
+        font-size:2rem;
+
+    }
+
+    h2{
+
+        font-size:1.7rem;
+
+    }
+
+    section{
+
+        padding:60px 0;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .btn{
+
+        width:100%;
+
+    }
+
+    h1{
+
+        font-size:1.7rem;
+
+    }
+
+    h2{
+
+        font-size:1.5rem;
+
+    }
+
+}

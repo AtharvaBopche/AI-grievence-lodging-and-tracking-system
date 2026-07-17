@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Government Portal Login</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../css/global.css">
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- Forms CSS -->
+    <link rel="stylesheet" href="../css/forms.css">
+
+    <!-- Animations CSS -->
+    <link rel="stylesheet" href="../css/animations.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ===========================
+         ADMIN LOGIN SECTION
+    ============================ -->
+
+    <section class="login-section">
+
+        <div class="login-card fade-up">
+
+            <!-- Optional Logo -->
+            <!--
+            <div class="login-logo">
+                <img src="../assets/logos/government-logo.png" alt="Government Logo">
+            </div>
+            -->
+
+            <h1>Enter Account Details</h1>
+
+            <form id="loginForm" onsubmit="loginAdmin(event)">
+
+                <!-- Username -->
+
+                <div class="input-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter your Username"
+                        autocomplete="username"
+                        required>
+
+                </div>
+
+                <!-- Password -->
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your Password"
+                        autocomplete="current-password"
+                        required>
+
+                </div>
+
+                <!-- Login Button -->
+
+                <button
+                    type="submit"
+                    class="btn btn-primary login-btn">
+
+                    Login
+
+                </button>
+
+            </form>
+
+            <!-- Error Message -->
+
+            <p id="login-error" class="error-message"></p>
+
+        </div>
+
+    </section>
+
+    <!-- Login JS -->
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>

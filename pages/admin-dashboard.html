@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Government Dashboard | AI Grievance System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-building-shield"></i>
+
+            Government Portal
+
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="../index.html">Home</a></li>
+
+            <li><a href="admin-dashboard.html">Dashboard</a></li>
+
+            <li><a href="view-complaints.html">Complaints</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- ================= HEADER ================= -->
+
+    <section class="page-header">
+
+        <h1>Government Dashboard</h1>
+
+        <p>
+
+            Manage, monitor and resolve AI-classified citizen grievances.
+
+        </p>
+
+    </section>
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section class="stats-container">
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            <h2>124</h2>
+
+            <p>Total Complaints</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-hourglass-half"></i>
+
+            <h2>18</h2>
+
+            <p>Submitted</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-person-digging"></i>
+
+            <h2>39</h2>
+
+            <p>In Progress</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h2>67</h2>
+
+            <p>Resolved</p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= DASHBOARD CARDS ================= -->
+
+    <section class="dashboard-grid">
+
+        <div class="dashboard-card"
+            onclick="window.location.href='view-complaints.html'">
+
+            <i class="fa-solid fa-list-check"></i>
+
+            <h2>View Complaints</h2>
+
+            <p>
+
+                View all complaints assigned to departments.
+
+            </p>
+
+        </div>
+
+        <div class="dashboard-card"
+            onclick="window.location.href='update-status.html'">
+
+            <i class="fa-solid fa-pen-to-square"></i>
+
+            <h2>Update Status</h2>
+
+            <p>
+
+                Update complaint progress and remarks.
+
+            </p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h2>Analytics</h2>
+
+            <p>
+
+                Monitor department performance and complaint trends.
+
+            </p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <h2>AI Classification</h2>
+
+            <p>
+
+                Review AI-generated department, priority and confidence.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= RECENT COMPLAINTS ================= -->
+
+    <section class="table-section">
+
+        <h2>Recent Complaints</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Ticket ID</th>
+
+                    <th>Citizen</th>
+
+                    <th>Department</th>
+
+                    <th>Status</th>
+
+                    <th>Priority</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>GRV202600001</td>
+
+                    <td>Atharva</td>
+
+                    <td>Road Department</td>
+
+                    <td>In Progress</td>
+
+                    <td>High</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>GRV202600002</td>
+
+                    <td>Riya</td>
+
+                    <td>Water Department</td>
+
+                    <td>Submitted</td>
+
+                    <td>Medium</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>GRV202600003</td>
+
+                    <td>Rahul</td>
+
+                    <td>Electricity</td>
+
+                    <td>Resolved</td>
+
+                    <td>Low</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- ================= QUICK ACTIONS ================= -->
+
+    <section class="actions">
+
+        <button onclick="window.location.href='view-complaints.html'">
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            View All Complaints
+
+        </button>
+
+        <button onclick="window.location.href='update-status.html'">
+
+            <i class="fa-solid fa-pen"></i>
+
+            Update Complaint
+
+        </button>
+        <button onclick="logout()">
+
+        Logout
+
+        </button>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 AI-Powered Grievance Lodging &
+            Tracking System
+
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>

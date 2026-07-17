@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complaint Details | Government Portal</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/animations.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-building-shield"></i>
+            Government Portal
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="admin-dashboard.html">Dashboard</a></li>
+            <li><a href="view-complaints.html">Complaints</a></li>
+            <li><a href="update-status.html">Update Status</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <h1>Complaint Details</h1>
+
+        <p>
+            Complete information about the selected grievance.
+        </p>
+
+    </section>
+
+    <!-- ================= BASIC DETAILS ================= -->
+
+    <section class="details-card">
+
+        <h2>Complaint Information</h2>
+
+        <div class="details-grid">
+
+            <div>
+                <strong>Ticket ID</strong>
+                <p>GRV202600001</p>
+            </div>
+
+            <div>
+                <strong>Citizen Name</strong>
+                <p>Rahul Sharma</p>
+            </div>
+
+            <div>
+                <strong>Mobile Number</strong>
+                <p>9876543210</p>
+            </div>
+
+            <div>
+                <strong>Location</strong>
+                <p>Bhayandar Railway Station</p>
+            </div>
+
+            <div>
+                <strong>Date Submitted</strong>
+                <p>12 July 2026</p>
+            </div>
+
+            <div>
+                <strong>Status</strong>
+                <p class="status progress">In Progress</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= COMPLAINT DESCRIPTION ================= -->
+
+    <section class="details-card">
+
+        <h2>Complaint Description</h2>
+
+        <p>
+
+            There is a huge pothole near the entrance of Bhayandar Railway
+            Station causing heavy traffic and creating danger for
+            two-wheelers and pedestrians.
+
+        </p>
+
+    </section>
+
+    <!-- ================= AI ANALYSIS ================= -->
+
+    <section class="details-card">
+
+        <h2>
+
+            <i class="fa-solid fa-robot"></i>
+
+            AI Analysis
+
+        </h2>
+
+        <div class="details-grid">
+
+            <div>
+                <strong>Detected Issue</strong>
+                <p>Pothole</p>
+            </div>
+
+            <div>
+                <strong>Department</strong>
+                <p>Road Department</p>
+            </div>
+
+            <div>
+                <strong>Priority</strong>
+                <p class="priority high">High</p>
+            </div>
+
+            <div>
+                <strong>Confidence</strong>
+                <p>96%</p>
+            </div>
+
+            <div>
+                <strong>AI Summary</strong>
+                <p>
+                    Large pothole creating danger for vehicles and
+                    pedestrians.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= COMPLAINT IMAGE ================= -->
+
+    <section class="details-card">
+
+        <h2>Uploaded Evidence</h2>
+
+        <img
+            src="../assets/images/sample-road.jpg"
+            alt="Complaint Image"
+            class="complaint-image">
+
+    </section>
+
+    <!-- ================= STATUS TIMELINE ================= -->
+
+    <section class="details-card">
+
+        <h2>Complaint Timeline</h2>
+
+        <div class="timeline">
+
+            <div class="step completed">
+                <i class="fa-solid fa-check"></i>
+                <span>Submitted</span>
+            </div>
+
+            <div class="step completed">
+                <i class="fa-solid fa-check"></i>
+                <span>Assigned</span>
+            </div>
+
+            <div class="step active">
+                <i class="fa-solid fa-person-digging"></i>
+                <span>In Progress</span>
+            </div>
+
+            <div class="step">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span>Inspection</span>
+            </div>
+
+            <div class="step">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Resolved</span>
+            </div>
+
+            <div class="step">
+                <i class="fa-solid fa-lock"></i>
+                <span>Closed</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= REMARKS ================= -->
+
+    <section class="details-card">
+
+        <h2>Latest Department Remarks</h2>
+
+        <div class="remarks-box">
+
+            Engineer has been assigned.
+
+            Site inspection completed.
+
+            Repair work is scheduled for tomorrow morning.
+
+        </div>
+
+    </section>
+
+    <!-- ================= ACTION BUTTONS ================= -->
+
+    <section class="action-buttons">
+
+        <button onclick="window.location.href='update-status.html'">
+
+            <i class="fa-solid fa-pen"></i>
+
+            Update Status
+
+        </button>
+
+        <button onclick="window.location.href='view-complaints.html'">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Complaints
+
+        </button>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 AI-Powered Grievance Lodging & Tracking System
+
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="../js/api.js"></script>
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>

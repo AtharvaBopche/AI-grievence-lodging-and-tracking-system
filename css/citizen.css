@@ -1,0 +1,282 @@
+/* =====================================================
+   CITIZEN DASHBOARD
+===================================================== */
+
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg,#2563eb,#1e40af);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: auto;
+    opacity: .9;
+}
+
+/* ================= Dashboard ================= */
+
+.dashboard {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 30px;
+}
+
+/* ================= Cards ================= */
+
+.card {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+
+    transition: .3s;
+}
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.card-icon {
+
+    font-size: 55px;
+
+    color: #2563eb;
+
+    margin-bottom: 20px;
+
+    transition: .3s;
+
+}
+
+.card:hover .card-icon{
+
+    transform: scale(1.1);
+
+}
+
+.card h2{
+
+    margin-bottom:15px;
+
+    color:#1e293b;
+
+}
+
+.card p{
+
+    color:#64748b;
+
+    line-height:1.6;
+
+    margin-bottom:25px;
+
+}
+
+/* ================= Buttons ================= */
+
+.primary-btn,
+.secondary-btn{
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:12px 28px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.primary-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.primary-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.secondary-btn{
+
+    background:#10b981;
+
+    color:white;
+
+}
+
+.secondary-btn:hover{
+
+    background:#059669;
+
+}
+
+/* ================= Recent Complaints ================= */
+
+.recent{
+
+    max-width:1200px;
+
+    margin:60px auto;
+
+    padding:0 20px;
+
+}
+
+.recent h2{
+
+    margin-bottom:25px;
+
+    color:#1e293b;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+thead{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+th,td{
+
+    padding:16px;
+
+    text-align:left;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+tbody tr:hover{
+
+    background:#f8fafc;
+
+}
+
+/* ================= Status ================= */
+
+.progress{
+
+    color:#2563eb;
+
+    font-weight:600;
+
+}
+
+.resolved{
+
+    color:#16a34a;
+
+    font-weight:600;
+
+}
+
+.high{
+
+    color:#dc2626;
+
+    font-weight:600;
+
+}
+
+.medium{
+
+    color:#ca8a04;
+
+    font-weight:600;
+
+}
+
+/* ================= Footer ================= */
+
+footer{
+
+    margin-top:70px;
+
+    background:#0f172a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:2.2rem;
+
+}
+
+.dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+table{
+
+display:block;
+
+overflow-x:auto;
+
+}
+
+}

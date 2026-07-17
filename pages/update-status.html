@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Update Complaint Status | Government Portal</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/animations.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-building-shield"></i>
+            Government Portal
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="admin-dashboard.html">Dashboard</a></li>
+            <li><a href="view-complaints.html">Complaints</a></li>
+            <li><a href="#">Update Status</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- ================= HEADER ================= -->
+
+    <section class="page-header">
+
+        <h1>Update Complaint Status</h1>
+
+        <p>
+            Update grievance status and provide remarks.
+        </p>
+
+    </section>
+
+    <!-- ================= UPDATE FORM ================= -->
+
+    <main class="form-container">
+
+        <form id="updateForm">
+
+            <!-- Ticket -->
+
+            <div class="input-group">
+
+                <label for="ticketId">Ticket ID</label>
+
+                <input
+                    type="text"
+                    id="ticketId"
+                    readonly>
+
+            </div>
+
+            <!-- Citizen -->
+
+            <div class="input-group">
+
+                <label for="citizen">Citizen Name</label>
+
+                <input
+                    type="text"
+                    id="citizen"
+                    readonly>
+
+            </div>
+
+            <!-- Department -->
+
+            <div class="input-group">
+
+                <label for="department">Department</label>
+
+                <input
+                    type="text"
+                    id="department"
+                    readonly>
+
+            </div>
+
+            <!-- Priority -->
+
+            <div class="input-group">
+
+                <label for="priority">Priority</label>
+
+                <input
+                    type="text"
+                    id="priority"
+                    readonly>
+
+            </div>
+
+            <!-- Status -->
+
+            <div class="input-group">
+
+                <label for="status">
+
+                    Update Status
+
+                </label>
+
+                <select id="status">
+
+                    <option value="Submitted">Submitted</option>
+                    <option value="Assigned">Assigned</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Inspection Completed">Inspection Completed</option>
+                    <option value="Resolved">Resolved</option>
+                    <option value="Closed">Closed</option>
+
+                </select>
+
+            </div>
+
+            <!-- Officer -->
+
+            <div class="input-group">
+
+                <label for="officer">
+
+                    Assigned Officer
+
+                </label>
+
+                <input
+                    type="text"
+                    id="officer"
+                    placeholder="Enter Officer Name">
+
+            </div>
+
+            <!-- Remarks -->
+
+            <div class="input-group">
+
+                <label for="remarks">
+
+                    Remarks
+
+                </label>
+
+                <textarea
+                    id="remarks"
+                    rows="6"
+                    placeholder="Enter progress details..."></textarea>
+
+            </div>
+
+            <!-- Completion -->
+
+            <div class="input-group">
+
+                <label for="completionDate">
+
+                    Estimated Completion Date
+
+                </label>
+
+                <input
+                    type="date"
+                    id="completionDate">
+
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="button-group">
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                    id="updateBtn">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Update Complaint
+
+                </button>
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    id="resolveBtn">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Mark as Resolved
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- ================= TIMELINE ================= -->
+
+    <section class="timeline-section">
+
+        <h2>Complaint Progress</h2>
+
+        <div class="timeline">
+
+            <div class="step completed">
+                <i class="fa-solid fa-check"></i>
+                <p>Submitted</p>
+            </div>
+
+            <div class="step">
+                <i class="fa-solid fa-user-check"></i>
+                <p>Assigned</p>
+            </div>
+
+            <div class="step">
+                <i class="fa-solid fa-person-digging"></i>
+                <p>In Progress</p>
+            </div>
+
+            <div class="step">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <p>Inspection</p>
+            </div>
+
+            <div class="step">
+                <i class="fa-solid fa-circle-check"></i>
+                <p>Resolved</p>
+            </div>
+
+            <div class="step">
+                <i class="fa-solid fa-lock"></i>
+                <p>Closed</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= AI ANALYSIS ================= -->
+
+    <section class="ai-summary">
+
+        <h2>
+
+            <i class="fa-solid fa-robot"></i>
+
+            AI Analysis
+
+        </h2>
+
+        <p>
+
+            <strong>Issue :</strong>
+
+            <span id="issue"></span>
+
+        </p>
+
+        <p>
+
+            <strong>Department :</strong>
+
+            <span id="aiDepartment"></span>
+
+        </p>
+
+        <p>
+
+            <strong>Priority :</strong>
+
+            <span id="aiPriority"></span>
+
+        </p>
+
+        <p>
+
+            <strong>Confidence :</strong>
+
+            <span id="confidence"></span>
+
+        </p>
+
+        <p>
+
+            <strong>Summary :</strong>
+
+            <span id="summary"></span>
+
+        </p>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 AI-Powered Grievance Lodging & Tracking System
+
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="../js/api.js"></script>
+    <script src="../js/update.js"></script>
+
+</body>
+
+</html>

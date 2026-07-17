@@ -1,0 +1,407 @@
+/* ==========================================================
+   AI GRIEVANCE SYSTEM
+   File: animations.css
+   Purpose: Reusable animations and transitions
+========================================================== */
+
+
+/* ==========================================================
+   FADE IN
+========================================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+
+/* ==========================================================
+   FADE UP
+========================================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+
+/* ==========================================================
+   FADE DOWN
+========================================================== */
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-down {
+    animation: fadeDown 0.8s ease forwards;
+}
+
+
+/* ==========================================================
+   SLIDE LEFT
+========================================================== */
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-left {
+    animation: slideLeft 0.8s ease forwards;
+}
+
+
+/* ==========================================================
+   SLIDE RIGHT
+========================================================== */
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-right {
+    animation: slideRight 0.8s ease forwards;
+}
+
+
+/* ==========================================================
+   ZOOM IN
+========================================================== */
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.zoom-in {
+    animation: zoomIn 0.6s ease forwards;
+}
+
+
+/* ==========================================================
+   FLOATING
+========================================================== */
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float {
+    animation: floating 4s ease-in-out infinite;
+}
+
+
+/* ==========================================================
+   PULSE
+========================================================== */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+
+/* ==========================================================
+   SPIN
+========================================================== */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+
+/* ==========================================================
+   SHIMMER LOADING
+========================================================== */
+
+@keyframes shimmer {
+
+    0% {
+        background-position: -450px 0;
+    }
+
+    100% {
+        background-position: 450px 0;
+    }
+
+}
+
+.shimmer {
+
+    background: linear-gradient(
+        90deg,
+        #f1f5f9 25%,
+        #e2e8f0 50%,
+        #f1f5f9 75%
+    );
+
+    background-size: 900px 100%;
+
+    animation: shimmer 1.5s linear infinite;
+
+}
+
+
+/* ==========================================================
+   CARD HOVER
+========================================================== */
+
+.card-hover {
+
+    transition: transform .3s ease,
+                box-shadow .3s ease;
+
+}
+
+.card-hover:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+
+}
+
+
+/* ==========================================================
+   BUTTON HOVER
+========================================================== */
+
+.btn-hover {
+
+    transition: all .3s ease;
+
+}
+
+.btn-hover:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ==========================================================
+   ICON HOVER
+========================================================== */
+
+.icon-hover {
+
+    transition: transform .3s ease;
+
+}
+
+.icon-hover:hover {
+
+    transform: scale(1.2) rotate(8deg);
+
+}
+
+
+/* ==========================================================
+   SCROLL REVEAL
+========================================================== */
+
+.hidden {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition: all .8s ease;
+
+}
+
+.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* ==========================================================
+   LOADING SPINNER
+========================================================== */
+
+.loader {
+
+    width: 50px;
+
+    height: 50px;
+
+    border: 5px solid #dbeafe;
+
+    border-top: 5px solid var(--primary-color);
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+
+}
+
+
+/* ==========================================================
+   RIPPLE EFFECT
+========================================================== */
+
+.ripple {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.ripple::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.4);
+
+    transform: scale(0);
+
+    opacity: 0;
+
+}
+
+.ripple:active::after {
+
+    animation: rippleEffect .5s ease;
+
+}
+
+@keyframes rippleEffect {
+
+    from {
+
+        transform: scale(0);
+
+        opacity: .6;
+
+    }
+
+    to {
+
+        transform: scale(20);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ==========================================================
+   PAGE TRANSITION
+========================================================== */
+
+.page-enter {
+
+    animation: fadeIn .6s ease;
+
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        animation: none !important;
+
+        transition: none !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+} 

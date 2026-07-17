@@ -1,0 +1,472 @@
+/* ==========================================
+   FORMS.CSS
+   AI Grievance System
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#1f2937;
+
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+
+    width:100%;
+    height:75px;
+
+    background:#ffffff;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 50px;
+
+    border-bottom:1px solid #e5e7eb;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+}
+
+.nav-left,
+.nav-right{
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+
+}
+
+.nav-left a{
+
+    text-decoration:none;
+    color:#111827;
+    font-size:15px;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.nav-left a:hover{
+
+    color:#2563eb;
+
+}
+
+.logo{
+
+    font-size:22px;
+    font-weight:700;
+    color:#111827;
+    text-align:center;
+
+}
+
+.outline-btn{
+
+    text-decoration:none;
+
+    border:2px solid #23395d;
+
+    color:#23395d;
+
+    padding:10px 26px;
+
+    border-radius:35px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.outline-btn:hover{
+
+    background:#23395d;
+    color:white;
+
+}
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.page-header{
+
+    text-align:center;
+
+    padding:45px 20px 20px;
+
+}
+
+.page-header h1{
+
+    font-size:2.5rem;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+/* ==========================================
+   FORM CONTAINER
+========================================== */
+
+.form-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:20px;
+
+}
+
+#complaintForm{
+
+    width:100%;
+
+    max-width:850px;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   INPUT GROUPS
+========================================== */
+
+.input-group{
+
+    margin-bottom:24px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+    background:#fff;
+
+}
+
+.input-group textarea{
+
+    min-height:170px;
+
+    resize:vertical;
+
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+::placeholder{
+
+    color:#9ca3af;
+
+}
+
+select{
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+   CHECKBOX
+========================================== */
+
+.checkbox-group label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-weight:500;
+
+    font-size:15px;
+
+}
+
+.checkbox-group input{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+/* ==========================================
+   SUBMIT BUTTON
+========================================== */
+
+.submit-btn{
+
+    width:100%;
+
+    background:#23395d;
+
+    color:white;
+
+    border:none;
+
+    border-radius:40px;
+
+    padding:16px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin-top:15px;
+
+}
+
+.submit-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.loading-box{
+
+    display:none;
+
+    position:fixed;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+    text-align:center;
+
+    z-index:9999;
+
+}
+
+.loader{
+
+    width:55px;
+
+    height:55px;
+
+    border:6px solid #e5e7eb;
+
+    border-top:6px solid #2563eb;
+
+    border-radius:50%;
+
+    margin:auto auto 18px;
+
+    animation:spin 1s linear infinite;
+
+}
+
+.loading-box h3{
+
+    font-size:20px;
+
+    margin-bottom:10px;
+
+}
+
+.loading-box p{
+
+    font-size:15px;
+
+    color:#6b7280;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1100px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        height:auto;
+
+        gap:20px;
+
+        padding:20px;
+
+    }
+
+    .logo{
+
+        font-size:20px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .nav-left{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+    .page-header h1{
+
+        font-size:2rem;
+
+    }
+
+    #complaintForm{
+
+        padding:30px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .logo{
+
+        font-size:18px;
+
+        text-align:center;
+
+    }
+
+    .page-header h1{
+
+        font-size:1.6rem;
+
+    }
+
+    #complaintForm{
+
+        padding:20px;
+
+    }
+
+    .submit-btn{
+
+        font-size:15px;
+
+    }
+
+}
